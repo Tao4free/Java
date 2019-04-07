@@ -2,19 +2,19 @@ import java.util.*;
 
 public class WeakHashMap_Demo {
     private static Map map;
-
     public static void main(String[] args) {
         map = new WeakHashMap();
         map.put(new String("Maine"), "Augusta");
 
         Runnable runner = new Runnable() {
             public void run() {
-                while (map.containsKey("Maine")); {
+                while (map.containsKey("Maine")) {
+                    System.out.println("Maine is found");
                     try {
                         Thread.sleep(500);
-                    } catch (InterruptedException ingored) {
+                    } catch (InterruptedException ignored) {
                     }
-                    System.out.println("Thread waiting");
+                    System.out.println("Thread waiting ended");
                     System.gc();
                 }
             }
