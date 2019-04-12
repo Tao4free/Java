@@ -1,0 +1,5 @@
+Task: make a stack class, which contains the basic methods of a stack and a method which returns the minimum of stack
+
+Constrains:
+1. pop, push, getMin all have time complex of O(I)
+2. the designed stack can use the existence structure of stack
