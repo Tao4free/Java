@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class TestMyStack1 {
+public class TestMyStack2 {
     public static void main(String[] args) {
-        MyStack1 ms = new MyStack1();
+        MyStack2 ms = new MyStack2();
 
         int[] list = {3,4,5,1,2,1};
         //System.out.println(list.length);
@@ -22,7 +22,7 @@ public class TestMyStack1 {
         }
     }
 
-    public static void showStack(MyStack1 ms) {
+    public static void showStack(MyStack2 ms) {
         System.out.println("DataStack size: " + ms.datasize());
         ms.showData();
         System.out.println("MinStack size: " + ms.minsize());

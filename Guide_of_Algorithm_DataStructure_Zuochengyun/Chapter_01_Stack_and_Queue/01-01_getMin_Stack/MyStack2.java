@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class MyStack1 {
+public class MyStack2 {
     private Stack<Integer> stackData;
     private Stack<Integer> stackMin;
 
-    public MyStack1() {
+    public MyStack2() {
         this.stackData = new Stack<Integer>();
         this.stackMin = new Stack<Integer>();
     }
@@ -14,6 +14,8 @@ public class MyStack1 {
             this.stackMin.push(newNum);
         } else if (newNum <= this.getmin()) {
             this.stackMin.push(newNum);
+        } else {
+            this.stackMin.push(this.getmin());
         }
         this.stackData.push(newNum);
     }
@@ -23,9 +25,7 @@ public class MyStack1 {
             throw new RuntimeException("Your stack is empty.");
         }
         int value = this.stackData.pop();
-        if (value == this.getmin()) {
-            this.stackMin.pop();
-        }
+        this.stackMin.pop();
         return value;
     }
 
