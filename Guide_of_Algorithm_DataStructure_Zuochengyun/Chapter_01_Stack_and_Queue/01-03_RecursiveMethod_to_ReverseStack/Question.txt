@@ -1,0 +1,1 @@
+Task: create a method to reverse a stack using reversive method. e.g. after you push 1, 2, 3, 4, 5 into a stack by sequence, you get a stack in a reverse sequence(5, 4, 3, 2, 1).
