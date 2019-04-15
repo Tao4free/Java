@@ -1,0 +1,14 @@
+Task: create a method. given an integer array and w sized window. window slide from left to right, every slide step is 1.
+    e.g. arra[4,3,5,4,3,3,6,7], window size is 3:
+    [4 3 5] 4 3 3 6 7       max value in window is 5
+    4 [3 5 4] 3 3 6 7       max value in window is 5
+    4 3 [5 4 3] 3 6 7       max value in window is 5
+    4 3 5 [4 3 3] 6 7       max value in window is 4
+    4 3 5 4 [3 3 6] 7       max value in window is 6
+    4 3 5 4 3 [3 6 7]       max value in window is 7
+
+    if length of array is n, window size is m, the length of max value array in window is n-w+1.
+
+Constrains:
+1. input : integer array arr, window size w
+2. output: an array with n-w+1 length res, res[i] represent each max value of each window 

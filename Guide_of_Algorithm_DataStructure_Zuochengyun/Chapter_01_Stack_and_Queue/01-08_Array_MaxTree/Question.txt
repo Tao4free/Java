@@ -1,0 +1,16 @@
+Task: given a array without replicated elements, create a method to generate a MaxTree of this array
+
+Constrains:
+1. if array length is N, time complexity should be O(N), extra space complexity is O(N)
+
+Supplements:
+1. define a binary tree as following:
+public class Node {
+    public int value;
+    public Node left;
+    public Node right;
+
+    public Node(int data) {
+        this.data = data;
+    }
+}

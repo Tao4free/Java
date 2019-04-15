@@ -1,0 +1,5 @@
+Task: given a stack of integer type; now you have to sort elements in stack by Descending order.
+
+Contrains:
+1. Only one stack is allowed to declare
+2. New variable declaration is allowed, but new data structure is prohibited

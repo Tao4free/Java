@@ -1,0 +1,5 @@
+Task: solve the Tower of Hanoi by stack
+
+Constrains:
+1. must move through middle tower
+2. print out the optimal move steps and totall steps

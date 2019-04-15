@@ -1,0 +1,10 @@
+Task: make dog and cat queue
+
+Constrains:
+1. user can use 'add' method to add cat or dog object to queue
+2. user can use 'pollAll' method to poll all objects by sequence
+3. user can use 'pollDog' method to poll all dog objects by sequence
+4. user can use 'pollCat' method to poll all cat objects by sequence
+5. user can use 'isEmpty' method whether dog or cat objects exist
+5. user can use 'isDogEmpty' method whether dog objects exist
+5. user can use 'isCatEmpty' method whether cat objects exist
