@@ -1,0 +1,12 @@
+Task: given a matrix named map, elements of map only contains 0 or 1. make a method to return number of 1 in max submatrix
+e.g. 
+map:
+    1 1 1 0
+    max submatrix contains three 1, so return 3
+
+map:
+    1 0 1 1
+    1 1 1 1
+    1 1 1 0
+    max submatrix contains six 1, so return 6
+
