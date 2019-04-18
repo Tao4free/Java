@@ -1,0 +1,5 @@
+Task: given an array arr and an integer num, create a method return number of subarray satisfies:
+    max(arr[i..j]) - min(arr[i..j]) <= num
+
+Constrains:
+1. if length of array is N, time complex should be O(N)
