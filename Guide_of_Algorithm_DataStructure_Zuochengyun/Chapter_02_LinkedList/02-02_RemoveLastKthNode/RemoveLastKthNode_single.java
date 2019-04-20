@@ -60,7 +60,7 @@ public class RemoveLastKthNode_single {
             cur.next = cur.next.next;
         }
 
-            System.out.println(head.value + " YES ");
+            //System.out.println(head.value + " YES ");
         return head;
     }
 }
