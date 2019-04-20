@@ -19,19 +19,20 @@ public class PrintCommonPart {
         printCommonPart(head1, head2);
     }
 
+    // refer https://www.jianshu.com/p/0d0dbfcbc1c3
     public static Node arrayToNode(int[] arr) {
         Node head = new Node(arr[0]);
         Node other = head;
         for (int i = 1; i < arr.length; i++) {
             Node temp = new Node(arr[i]);
             other.next = temp;
-            other = temp;
+            other = other.next;
         }
         return head;
     }
 
     public static void displayNode(Node head) {
-        while(head.next != null) {
+        while(head != null) {
             System.out.print(head.value + " ");
             head = head.next;
         }

@@ -1,5 +1,5 @@
-Task: make a stack class, which contains the basic methods of a stack and a method which returns the minimum of stack
+Task: make two method, one can delete last kth node in a LinkedList and another can delete last kth node in a double LinkedList
 
 Constrains:
-1. pop, push, getMin all have time complex of O(I)
-2. the designed stack can use the existence structure of stack
+1. if the length of LinkedList is N, time complexity shouble be O(N), extra space complexity should be O(1)
+
