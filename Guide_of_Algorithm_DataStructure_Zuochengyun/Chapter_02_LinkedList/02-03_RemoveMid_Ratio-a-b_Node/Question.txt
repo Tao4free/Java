@@ -1,0 +1,18 @@
+Task: given a linkedlist's head, 
+      linkedlist = 1->2->3->4->5
+
+      make a method to remove mid node;
+      null                not remove any node
+      1->2                remove node 1
+      1->2->3             remove node 2
+      1->2->3->4          remvoe node 2
+      1->2->3->4->5       remvoe node 3
+
+      make a method to remove r = a*5/b node
+      r = 0               not remove any node
+      r \in (0,1]         remove node 1
+      r \in (1,2]         remove node 2
+      r \in (2,3]         remove node 3
+      r \in (3,4]         remove node 4
+      r \in (4,5]         remove node 5
+      r \in (5,\infty)    not remove any node

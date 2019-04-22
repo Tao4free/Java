@@ -12,7 +12,7 @@ public class RemoveLastKthNode_single {
 
         System.out.println();
         int lastKth = 7;
-        removeLastKthNode(head, lastKth);
+        head = removeLastKthNode(head, lastKth);
         System.out.println("After remove last" + lastKth + "th" + " LinkedList:");
         displayNode(head);
     }
