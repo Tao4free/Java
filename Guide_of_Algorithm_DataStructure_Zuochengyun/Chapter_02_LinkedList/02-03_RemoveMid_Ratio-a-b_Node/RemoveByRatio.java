@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class RemoveMidNode {
+public class RemoveByRatio {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
 
         Node head = arrayToNode(arr);
         displayNode(head);
 
-        removeMidNode(head);
+        head = removeByRatio(head,1,5);
         displayNode(head);
     }
 
@@ -31,22 +31,30 @@ public class RemoveMidNode {
         System.out.println();
     }
 
-    public static Node removeMidNode(Node head) {
-        if (head == null || head.next == null ) {
+    public static Node removeByRatio(Node head, int a, int b) {
+        if (a < 1 || a > b ) {
             return head;
         }
 
-        if (head.next.next == null) {
-            return head.next;
+        int n = 0;
+        Node cur = head;
+        while (cur != null) {
+            n++;
+            cur = cur.next;
         }
 
-        Node pre = head;
-        Node cur = head.next.next;
-        while (cur.next != null && cur.next.next != null) {
-            pre = pre.next;
-            cur = cur.next.next;
+        n = (int) Math.ceil((double) (a * n) / (double) b);
+        if (n == 1) {
+            head = head.next;
         }
-        pre.next = pre.next.next;
+
+        if (n > 1) {
+            cur = head;
+            while (--n != 1) {
+                cur = cur.next;
+            }
+            cur.next = cur.next.next;
+        }
         return head;
     }
 }
