@@ -1,0 +1,4 @@
+Task: given a linkedlist head,make a method to reverse single linkedlist and a method to reverse double linkedlist
+
+Constrains:
+1. if the length of linkedlist is N, timec complexity should be O(N), extra space complexity shouble be O(1)
