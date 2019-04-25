@@ -21,7 +21,7 @@ public class RemoveLastKthNode_double {
     public static DoubleNode arrayToNode_double(int[] arr) {
         DoubleNode head = new DoubleNode(arr[0]);
         DoubleNode other = head;
-        DoubleNode last  = head;
+        DoubleNode last  = null;
         for (int i = 1; i < arr.length; i++) {
             DoubleNode temp = new DoubleNode(arr[i]);
             other.next = temp;
