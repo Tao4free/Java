@@ -8,7 +8,7 @@ public class ReverseList_singlePart {
         System.out.println();
 
         int from = 2;
-        int to = 5;
+        int to = 6;
         head = reverseListPart(head, from, to);
         System.out.println("After Partreversion:");
         displayNode(head);
@@ -45,13 +45,14 @@ public class ReverseList_singlePart {
             pos = len == to   + 1 ? cur : pos;
             cur = cur.next;
         }
+        //System.out.println("from head case pre.value: " + pre.value);
 
         if (from > to || from < 1 || to > len) {
             return head;
         }
 
         Node next = null; 
-        cur = pre.next;
+        cur = pre == null ? head :  pre.next;
         for (int i = from; i <= to; i++) {
             next = cur.next;
             cur.next = pos;
@@ -59,7 +60,11 @@ public class ReverseList_singlePart {
             cur = next;
         }
 
-        pre.next = pos;
+        if (pre == null) {
+            head = pos;
+        } else {
+            pre.next = pos;
+        }
 
         return head;
     }
