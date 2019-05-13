@@ -1,0 +1,5 @@
+Task: make a method to check whether a linkedlist is palindrime or not. 
+
+Constrains:
+1. if linkedlist length is N, time complexity should be O(N), 
+   extra space complexity should be O(1).
