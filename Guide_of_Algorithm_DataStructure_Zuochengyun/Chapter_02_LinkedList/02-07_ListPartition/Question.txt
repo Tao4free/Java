@@ -1,0 +1,6 @@
+Task: given a pivot, make a mthod to divide list into three parts(smaller, equal, bigger) 
+
+Constrains:
+method1 no constrain
+method2 a. if linkedlist length is N, time complexity should be O(N), extra space complexity should be O(1).
+        b. keep the sequence of original list

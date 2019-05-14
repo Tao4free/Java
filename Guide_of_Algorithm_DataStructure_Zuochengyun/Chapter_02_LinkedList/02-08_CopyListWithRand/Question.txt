@@ -1,0 +1,5 @@
+Task: given a linkedlist with a special random pointer, try to make a method to copy the linkedlist 
+
+Constrains:
+method1 no constrain
+method2 dont's use extra data structure, just use limited variables, and make the time complexity is O(N) 
