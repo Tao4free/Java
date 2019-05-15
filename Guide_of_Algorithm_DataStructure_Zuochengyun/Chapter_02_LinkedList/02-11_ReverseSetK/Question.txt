@@ -1,0 +1,2 @@
+Task: given a single linkedlist, make a method to arrange it. make sure reversing a set of nodes with K amount.
+

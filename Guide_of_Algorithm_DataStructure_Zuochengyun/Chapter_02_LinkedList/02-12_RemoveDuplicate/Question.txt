@@ -1,0 +1,7 @@
+Task: given a single linkedlist, make a method to remove duplicates. 
+
+e.g. given a linkedlist 1 -> 2 -> 3 -> 3 -> 4 -> 4 -> 2 -> 1 -> 1 -> null, after removing the duplicates, the linkedlist should be 1 -> 2 -> 3 -> 4 -> null
+
+Constrains:
+Method1: if the length of linkedlist is N, time complexity should be O(N)
+Method2: the space complexity should be O(1)
