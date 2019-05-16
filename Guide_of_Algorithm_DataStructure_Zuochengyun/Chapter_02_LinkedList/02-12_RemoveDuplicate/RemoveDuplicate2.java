@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RemoveDuplicate1 {
+public class RemoveDuplicate2 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 3, 4, 4, 2, 1};
         Node head = arrayToNode(arr);
@@ -9,7 +9,7 @@ public class RemoveDuplicate1 {
         displayNode(head);
         System.out.println();
 
-        removeDuplicate1(head);
+        removeDuplicate2(head);
         System.out.println("After reverse: ");
         displayNode(head);
     }
@@ -34,21 +34,24 @@ public class RemoveDuplicate1 {
         System.out.println();
     }
 
-    public static void removeDuplicate1(Node head) {
+    public static void removeDuplicate2(Node head) {
         if (head == null) {
             return;
         }
 
-        HashSet<Integer> set = new HashSet<Integer>();
-        Node pre = head;
-        Node cur = head.next;
-        set.add(head.value);
+        Node cur = head;
+        Node pre = null;
+        Node next = null;
         while (cur != null) {
-            if (set.contains(cur.value)) {
-                pre.next = cur.next;
-            } else {
-                set.add(cur.value);
-                pre = cur;
+            pre = cur;
+            next = cur.next;
+            while (next != null) {
+                if (cur.value == next.value) {
+                    pre.next = next.next;
+                } else {
+                    pre = next;
+                }
+                next = next.next;
             }
             cur = cur.next;
         }
