@@ -1,0 +1,4 @@
+Task: given a linkedlist which type is integer. just given a node of the linkedlist (not head), make a method to remove the node
+
+Constrains:
+1. time complexity should be O(1)

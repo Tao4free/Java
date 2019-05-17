@@ -1,5 +1,7 @@
-Task: make a stack class, which contains the basic methods of a stack and a method which returns the minimum of stack
+Task: given a binary tree, to make a double linkedlist.
+
+Info: for a binary tree, it contains value and two pointers to poitto the left and right child; for a double linkedlist, it contains value and two nodes which one point to the last node and next node. they are similar to each other in structure.
 
 Constrains:
-1. pop, push, getMin all have time complex of O(I)
-2. the designed stack can use the existence structure of stack
+Method1. use queue or other data structure to complete the task. time complexity is O(N), extra space complexity is O(N)
+Method2. use recursive method to complete the task. time complexity is O(N), extra space complexity is O(h), h is the height of binary tree.

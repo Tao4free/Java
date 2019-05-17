@@ -1,0 +1,4 @@
+Task: given a circle ascending linkedlist and a integer num, please generate a new node with value of num, then insert it to the circle linkedlist and keep it ordered
+
+Constrains:
+1. time complexity should be O(N), extra space complexity should be O(1)
