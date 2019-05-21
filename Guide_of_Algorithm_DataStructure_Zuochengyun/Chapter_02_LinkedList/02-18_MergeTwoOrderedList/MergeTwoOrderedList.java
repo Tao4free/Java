@@ -1,18 +1,20 @@
 import java.util.*; 
 
-public class InsertNodeToCircle {
+public class MergeTwoOrderedList {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 9};
-        Node head = arrayToNodeCircle(arr);
+        int[] arr1 = {0, 2, 3, 7};
+        int[] arr2 = {1, 3, 5, 7, 9};
+        Node head1 = arrayToNodeCircle(arr1);
+        Node head2 = arrayToNodeCircle(arr2);
 
         System.out.println("Initial linKedlist is:");
-        displayNodeCirle(head);
+        displayNodeCirle(head1);
+        displayNodeCirle(head2);
         System.out.println();
 
-        int num = 0;
-        head = insertNodeToCircle(head, num);
-        System.out.println("After insertion: ");
-        displayNodeCirle(head);
+        //head = mergeTwoOrderedList(head1, head2);
+        //System.out.println("After merge: ");
+        //displayNodeCirle(head);
     }
 
     public static Node arrayToNodeCircle(int[] arr) {
@@ -38,7 +40,7 @@ public class InsertNodeToCircle {
         System.out.println();
     }
 
-    public static Node insertNodeToCircle(Node head, int num) {
+    public static Node mergeTwoOrderedList(Node head, int num) {
 
         Node cur = head;
         Node temp = null;
