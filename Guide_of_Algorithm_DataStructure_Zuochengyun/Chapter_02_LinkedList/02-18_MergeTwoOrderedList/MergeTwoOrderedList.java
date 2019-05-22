@@ -4,20 +4,20 @@ public class MergeTwoOrderedList {
     public static void main(String[] args) {
         int[] arr1 = {0, 2, 3, 7};
         int[] arr2 = {1, 3, 5, 7, 9};
-        Node head1 = arrayToNodeCircle(arr1);
-        Node head2 = arrayToNodeCircle(arr2);
+        Node head1 = arrayToNode(arr1);
+        Node head2 = arrayToNode(arr2);
 
         System.out.println("Initial linKedlist is:");
-        displayNodeCirle(head1);
-        displayNodeCirle(head2);
+        displayNode(head1);
+        displayNode(head2);
         System.out.println();
 
-        //head = mergeTwoOrderedList(head1, head2);
-        //System.out.println("After merge: ");
-        //displayNodeCirle(head);
+        head1 = mergeTwoOrderedList(head1, head2);
+        System.out.println("After merge: ");
+        displayNode(head1);
     }
 
-    public static Node arrayToNodeCircle(int[] arr) {
+    public static Node arrayToNode(int[] arr) {
         Node head = new Node(arr[0]);
         Node cur = head;
         for (int i = 1; i < arr.length; i++) {
@@ -25,61 +25,49 @@ public class MergeTwoOrderedList {
             cur.next = temp;
             cur = cur.next;
         }
-        cur.next = head;
         return head;
     }
 
-    public static void displayNodeCirle(Node head) {
+    public static void displayNode(Node head) {
         Node cur = head;
-        System.out.print(cur.value + " ");
-        cur = cur.next;
-        while (cur != head) {
+        while (cur != null) {
             System.out.print(cur.value + " ");
             cur = cur.next;
         }
         System.out.println();
     }
 
-    public static Node mergeTwoOrderedList(Node head, int num) {
+    public static Node mergeTwoOrderedList(Node head1, Node head2) {
 
-        Node cur = head;
-        Node temp = null;
-        Node node = new Node(num);
-        Node tail = null;
+        Node cur1 = head1;
+        Node cur2 = head2;
+        Node pre = null;
+        Node next = null;
 
-        if (head == null) {
-            node.next = node;
-            return node;
+        if (cur1 == null || cur2 == null) {
+            return cur1 == null ? cur2 : cur1;
         }
 
-        cur = cur.next;
-        while (cur != head) {
-            tail = cur;
-            cur = cur.next;
-        }
-
-        if (cur.value > num) {
-            temp = head;
-            head = node;
-            head.next = temp;
-            tail.next = head;
-        }
-
-        if (tail.value < num) {
-            tail.next = node;
-            node.next = head;
-        }
-
-        cur = head.next;
-        while (cur != head && cur.next != head) {
-            if (cur.value < num && cur.next.value > num) {
-                temp = cur.next;
-                cur.next = node;
-                node.next = temp;
+        while (cur1 != null || cur2 != null) {
+            if (cur1 == null) {
+                pre.next = cur2;
+                return head1;
             }
-            cur = cur.next;
+            if (cur2 == null) {
+                return head1;
+            }
+
+           if (cur1.value <= cur2.value) {
+               pre = cur1;
+               cur1 = cur1.next;
+           } else {
+               next = cur2.next;
+               pre.next = cur2;
+               cur2.next = cur1;
+               cur2 = next;
+           }
         }
 
-        return head;
+        return head1;
     }
 }
