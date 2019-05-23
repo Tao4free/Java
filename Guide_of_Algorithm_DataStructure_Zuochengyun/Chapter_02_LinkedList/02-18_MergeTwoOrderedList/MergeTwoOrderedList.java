@@ -2,8 +2,8 @@ import java.util.*;
 
 public class MergeTwoOrderedList {
     public static void main(String[] args) {
-        int[] arr1 = {0, 2, 3, 7};
-        int[] arr2 = {1, 3, 5, 7, 9};
+        int[] arr1 = {1, 2, 3, 7};
+        int[] arr2 = {0, 3, 5, 7, 9};
         Node head1 = arrayToNode(arr1);
         Node head2 = arrayToNode(arr2);
 
@@ -61,11 +61,13 @@ public class MergeTwoOrderedList {
                pre = cur1;
                cur1 = cur1.next;
            } else {
+               pre = pre == null ? cur2 : pre;
                next = cur2.next;
-               pre.next = cur2;
                cur2.next = cur1;
+               pre.next = cur2 == head2 ? cur1 : cur2 ;
                cur2 = next;
            }
+           //System.out.println("pre : " + pre.value + " cur2 : " + cur2.value + " cur1 : " + cur1.value); 
         }
 
         return head1;
