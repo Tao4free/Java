@@ -1,0 +1,1 @@
+Task: given the head of a linkedlist, the length is N. [1,N/2] is the left part(L1->L2->...) [N/2+1, N] is the right part (R1->R2->...). make a method to arrange the linkedlist to (L1->R1->L2->R3->... )
