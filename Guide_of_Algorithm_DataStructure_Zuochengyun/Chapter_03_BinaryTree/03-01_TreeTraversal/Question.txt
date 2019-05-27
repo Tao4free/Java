@@ -1,0 +1,9 @@
+Task: print all nodes of binary treee in Pre-Order, In-Order, Post-Order
+
+Info: in our rules, 
+Pre-Order is the order root->left->right
+In-Order is the order left->root->right
+Post-Order is the order left->right->root
+
+Constrains:
+1. use recursive and non-recursive method
