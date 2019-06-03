@@ -1,0 +1,32 @@
+Task: given the head of a binary tree, nake a method to print out the edges of the binary tree in two different rules determing edges
+    rule1:
+    1. head node is edge
+    2. leaf node is edge
+    3. the node should be the edge if it locates at most left or right
+
+    rule2:
+    1. head node is edge
+    2. leaf node is edge
+    3. nodes on the path along the left  edge are edges
+    4. nodes on the path along the right edge are edges
+
+    example:
+                1
+              /   \
+        2               3
+        \               /\
+        4              5  6
+       /\             / \
+      7  8           9  10
+          \          /
+           11       12
+           /\       /\
+         13  14   15 16
+
+    rule1: 1,2,4,7,11,13,14,15,16,12,10,6,3
+    rule2:1,2,4,7,13,14,15,16,10,6,3
+
+
+Constrains:
+1. time complexity O(N), extra space complexity O(h), h is the height of binary tree
+2. both of the two rules should print out all edges in counterclockwise order without repetitive nodes
