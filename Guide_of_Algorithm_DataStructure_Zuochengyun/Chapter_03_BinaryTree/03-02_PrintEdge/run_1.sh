@@ -1,7 +1,7 @@
 #!/bin/ksh
 gmake
 
-file=`ls *.java`
+file=`ls *_1.java`
 exe=${file%.*}
 
 #echo $exe
