@@ -75,11 +75,17 @@ public class PrintEdge_1 {
             return;
         }
 
+        // get the height of binary tree
         //int height = getHeight(head, 0);
         int height = heightOfTree(head);
         System.out.println("height is " + height);
+
+        // set edge map store left and right nodes
         Node [][] edgeMap = new Node[height][2];
         setEdgeMap(head, 0, edgeMap);
+        for (int i = 0; i < height; i ++) {
+            System.out.println("height = " + i + " " + edgeMap[i][0].value + " " + edgeMap[i][1].value);
+        }
 
         // print left edge
         for (int i = 0; i != edgeMap.length; i++) {
