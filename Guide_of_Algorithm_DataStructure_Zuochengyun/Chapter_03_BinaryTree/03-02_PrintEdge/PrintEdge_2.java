@@ -4,6 +4,7 @@ import java.util.*;
 public class PrintEdge_2 {
     public static void main(String[] args) {
         BinaryTree bt = new BinaryTree();
+        // add(parent, value, direction:1-left_2-right)
         bt.add(1,1,1);
         bt.add(1,2,1);
         bt.add(2,4,2);
