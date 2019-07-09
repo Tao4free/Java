@@ -25,6 +25,10 @@ public class TreeTraversal_Stack {
         System.out.println("Post-Order2 stack:");
         postOrderStack2(head);
         System.out.println();
+
+        System.out.println("Breadth-First Search queue:");
+        levelOrderQueue(head);
+        System.out.println();
     }
 
     public static void preOrderStack(TreeNode head) {
@@ -107,4 +111,21 @@ public class TreeTraversal_Stack {
             }
         }
     }
+
+
+    public static void levelOrderQueue(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<TreeNode>();
+        if (root == null)
+            return;
+        q.add(root);
+        while (!q.isEmpty()) {
+            TreeNode n = (TreeNode) q.remove();
+            System.out.print(" " + n.value);
+            if (n.left != null)
+                q.add(n.left);
+            if (n.right != null)
+                q.add(n.right);
+        }
+    }
+
 }
