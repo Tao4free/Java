@@ -1,0 +1,15 @@
+Task: given a "head" of binary tree and a 32-bit integer "sum", binary tree is integer type; calculate the max length of a path to get the given "sum"; the path can start from any node the tree with the downward direction, the next node in the path should be the current node's child or none node
+
+    e.g.
+                -3
+            /        \
+        3               -9
+      /   \          /    \
+    1       0       2       1
+          /   \
+        1       6
+    if sum = 6, max length path is -3, 3, 0, 6, so maxlength = 4;
+    if sum = -9, max length path is -9, so maxlength = 1;
+
+Constrains:
+1. dont have to consider the situation that sum of two integer overflows
